@@ -1,0 +1,70 @@
+[
+    {
+        "MessageBody": "user account 0001 on 2021-11-23 at 18:40:31 PM.",
+        "DelaySeconds": 10,
+        "MessageAttributes": {
+            "Name": {
+                "DataType": "String",
+                "StringValue": "name"
+            },
+            "Email": {
+                "DataType": "String",
+                "StringValue": "name@email.com"
+            },
+            "PhoneNumber": {
+                "DataType": "String",
+                "StringValue": "559999999999"
+            },
+            "LastName": {
+                "DataType": "String",
+                "StringValue": "lastname"
+            },
+            "City": {
+                "DataType": "String",
+                "StringValue": "Belo Horizonte"
+            },
+            "State": {
+                "DataType": "String",
+                "StringValue": "MG"
+            },
+            "PostalCode": {
+                "DataType": "String",
+                "StringValue": "99065"
+            }
+        }
+    },
+    {
+        "MessageBody": "user account 0002 on 2021-11-23 at 18:40:33 PM.",
+        "DelaySeconds": 10,
+        "MessageAttributes": {
+            "Name": {
+                "DataType": "String",
+                "StringValue": "name2"
+            },
+            "Email": {
+                "DataType": "String",
+                "StringValue": "name2@email.com"
+            },
+            "PhoneNumber": {
+                "DataType": "String",
+                "StringValue": "559999999992"
+            },
+            "LastName": {
+                "DataType": "String",
+                "StringValue": "lastname2"
+            },
+            "City": {
+                "DataType": "String",
+                "StringValue": "Vila Velha"
+            },
+            "State": {
+                "DataType": "String",
+                "StringValue": "ES"
+            },
+            "PostalCode": {
+                "DataType": "String",
+                "StringValue": "99063"
+            }
+        }
+    }
+]

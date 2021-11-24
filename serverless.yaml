@@ -1,0 +1,44 @@
+service: lambda-local-sqs
+useDotenv: true
+
+frameworkVersion: '>=2.3.0'
+
+provider:
+    name: aws
+    region: us-east-1
+    runtime: nodejs14.x
+    lambdaHashingVersion: '20201221'
+
+custom:
+    defaultStage: local
+    profile: dev-local
+    localstack:
+        debug: true
+        stages: [local]
+
+functions:
+    postMessage:
+        handler: src/index.postMessage
+        events:
+            - httpApi:
+                  path: /
+                  method: post
+
+    getAll:
+        handler: src/index.getAll
+        events:
+            - httpApi:
+                  path: /
+                  method: get
+
+    deleteMessage:
+        handler: src/index.deleteMessages
+        events:
+            - httpApi:
+                  path: /{receiptHandle}
+                  method: delete
+
+plugins:
+    - serverless-offline
+    - serverless-localstack
+    - serverless-plugin-typescript

@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+    localstack:
+        container_name: localstack
+        image: localstack/localstack
+        network_mode: bridge
+        ports:
+            - '4566:4566'
+            - '4571:4571'
+        environment:
+            - SERVICES=sqs
+            - DEBUG=${DEBUG- }
+            - HOST_TMP_FOLDER=${TMPDIR:-/tmp/}localstack
+            - DOCKER_HOST=unix:///var/run/docker.sock
+        volumes:
+            - '${TMPDIR:-/tmp}/localstack:/tmp/localstack'
